@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignment 2</title>
+  <style>
+    body {
+      background-image: url("Arpanjeet.png"); 
+      background-size: cover;
+    }
+    h1 {
+      background-color: lightblue;
+      font-family: Cambria;
+      font-size: 45px;
+    }
+    li {
+      color: green;
+    }
+    .divider {
+      width: 50%;
+      height: 3px;
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Welcome to My Webpage</h1>
+
+  <!-- Nested List -->
+  <ul type="square">
+    <li>Outer List
+      <ol type="a">
+        <li>Second Level
+          <ol type="i">
+            <li>Third Level Item 1</li>
+            <li>Third Level Item 2</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ul>
+
+  <div class="divider"></div>
+  
+  <!-- Embedded YouTube video -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lb0ib5B_bK4" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+<!-- SECTION 2 -->
+<div id="section2" style="background-image: url('bcplace.jpg'); background-size: cover; padding: 20px;">
+  <h1>Choose an Image</h1>
+
+  <!-- Radio buttons -->
+  <label><input type="radio" name="imageOption" onclick="showImage('file:///Users/harmanmann/Downloads/untitled%20folder/WhatsApp%20Image%202025-06-06%20at%2012.10.50%20PM.jpeg')"> Image of yourself</label><br>
+  <label><input type="radio" name="imageOption" onclick="showImage('https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg/1200px-Eopsaltria_australis_-_Mogo_Campground.jpg')"> Bird</label><br>
+  <label><input type="radio" name="imageOption" onclick="showImage('https://5.imimg.com/data5/SELLER/Default/2022/9/KN/ZB/OF/77370859/live-fish-500x500.jpg')"> Fish</label><br><br>
+
+  <!-- Image container -->
+  <img id="displayImage" src="" alt="Selected image will appear here" width="300">
+</div>
+<script>
+  function showImage(filename) {
+    document.getElementById("displayImage").src = filename;
+  }
+</script>
+
+  <!-- SECTION 3 -->
+  <div id="section3" style="padding: 20px;">
+    <h1>Number Comparison Game</h1>
+
+    <label>Enter Number 1: </label>
+    <input type="number" id="num1"><br><br>
+
+    <label>Enter Number 2: </label>
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="compareNumbers()">Compare</button><br><br>
+
+    <input type="text" id="output" readonly style="width: 300px;">
+  </div>
